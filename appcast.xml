@@ -3,6 +3,14 @@
     <channel>
         <title>Cloister</title>
         <item>
+            <title>1.0.1</title>
+            <pubDate>Sat, 11 Jul 2026 10:47:20 +0900</pubDate>
+            <sparkle:version>202607111046</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.2</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.0.1/cloister-1.0.1.dmg" length="5313010" type="application/octet-stream" sparkle:edSignature="BaP+ismauYXFbwFBT+gPiv6LYE7x+GRCWrRWVqpndl+O+LfLl0SD0SiMsMAfFfHs7PPesyKCEp1+DMonQYA2AA=="/>
+        </item>
+        <item>
             <title>1.0.0</title>
             <pubDate>Sat, 11 Jul 2026 10:08:05 +0900</pubDate>
             <sparkle:version>202607111007</sparkle:version>

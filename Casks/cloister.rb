@@ -1,6 +1,6 @@
 cask "cloister" do
-  version "1.0.0"
-  sha256 "54936bd7988f066d01c9ee881cd801a88ad962fee6ee1978e3203ac3168527cb"
+  version "1.0.1"
+  sha256 "cf72e9d33a6324bdf371a971ee77091efb0e4ad46183ea79f48792ee0dd8547d"
 
   url "https://github.com/khy07181/homebrew-cloister/releases/download/v#{version}/cloister-#{version}.dmg"
   name "Cloister"
