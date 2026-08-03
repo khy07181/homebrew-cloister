@@ -3,6 +3,35 @@
     <channel>
         <title>Cloister</title>
         <item>
+            <title>1.1.0</title>
+            <pubDate>Mon, 03 Aug 2026 13:33:45 +0900</pubDate>
+            <sparkle:version>202608031238</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>iCloud sync (Pro): completed cycle history and presets sync across Macs via the user's iCloud account. Off by default; toggle in the Pro tab (applies after restart). Running timers stay per-device.</li>
+<li>Cloister Pro lifetime license — activation, validation with a 14-day offline grace window, and deactivation via Lemon Squeezy (dedicated Pro tab)</li>
+<li>Menu bar progress ring (emerald focus / gold break) with a configurable display mode: ring, time, or both</li>
+<li>Explicit SwiftData schema versioning with an automatic pre-migration store backup (last 3 backups kept)</li>
+<li>Send Feedback — a Help-menu item and a Settings ▸ Support row that open a pre-filled email to support (including your app and macOS version)</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Runs as a dynamic menu-bar agent; app bundle renamed to Cloister.app</li>
+<li>Default keyboard shortcuts moved to the conflict-safe ctrl+opt+cmd chord</li>
+<li>Minimum supported macOS lowered from 26.2 to 15 (Sequoia)</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Menu bar popover now dismisses on outside click</li>
+<li>Menu bar popover colors stay stable across app states</li>
+<li>Long break no longer arrives a session early when an earlier focus session was left paused for hours (for example, running overnight)</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.1.0/cloister-1.1.0.dmg" length="4777971" type="application/octet-stream" sparkle:edSignature="C5Vt4oPPDSgoVQ8AvowpJVBVkuQm609PF1ct0QAzLTwGRs+P24tF6MQzch+wOe/Orv94TyQZZfRxSEdmjQrWBw=="/>
+        </item>
+        <item>
             <title>1.0.1</title>
             <pubDate>Sat, 11 Jul 2026 10:47:20 +0900</pubDate>
             <sparkle:version>202607111046</sparkle:version>
