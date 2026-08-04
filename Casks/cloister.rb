@@ -8,7 +8,7 @@ cask "cloister" do
   homepage "https://dochigarden.com/cloister/"
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Cloister.app"
 end
