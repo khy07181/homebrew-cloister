@@ -3,6 +3,23 @@
     <channel>
         <title>Cloister</title>
         <item>
+            <title>1.1.1</title>
+            <pubDate>Thu, 06 Aug 2026 00:07:26 +0900</pubDate>
+            <sparkle:version>202608060003</sparkle:version>
+            <sparkle:shortVersionString>1.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>About tab — app version plus Send Feedback and the support email now live in their own dashboard tab (moved out of Settings)</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Duplicate default presets no longer appear after turning on iCloud sync on a second Mac; any existing duplicates are reconciled automatically on launch</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.1.1/cloister-1.1.1.dmg" length="4799440" type="application/octet-stream" sparkle:edSignature="w04bzYmLJtOAJaqCan5T7kUMNWEGOzut3ooObMoKTpfga9vc9wQPgABbCEOfi6vFVRbq24C+MnAlczl3REsuAw=="/>
+        </item>
+        <item>
             <title>1.1.0</title>
             <pubDate>Mon, 03 Aug 2026 13:33:45 +0900</pubDate>
             <sparkle:version>202608031238</sparkle:version>
