@@ -3,6 +3,23 @@
     <channel>
         <title>Cloister</title>
         <item>
+            <title>1.1.2</title>
+            <pubDate>Thu, 10 Sep 2026 17:40:19 +0900</pubDate>
+            <sparkle:version>202609101727</sparkle:version>
+            <sparkle:shortVersionString>1.1.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Changed</h3>
+<ul>
+<li>History now shows the selected day only, with that day's stacks, focus time, and goal state above the list. Picking a date used to just scroll a list that still held every day</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>Auto-start settings now apply to the cycle already running: turning on "Auto-start break" (or "Auto-start next focus") while a Focus is in progress takes effect at that cycle's own boundary instead of only from the next cycle. Durations stay fixed for the running cycle as before</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.1.2/cloister-1.1.2.dmg" length="4806172" type="application/octet-stream" sparkle:edSignature="s5jQlk2qfv79/GKJM8YarKziZXvxTZPF1tmRHeF2ZNXBCXdc+nC2Av7K7NEiRzuRHz3/TM2C1ULry8IDfyznCw=="/>
+        </item>
+        <item>
             <title>1.1.1</title>
             <pubDate>Thu, 06 Aug 2026 00:07:26 +0900</pubDate>
             <sparkle:version>202608060003</sparkle:version>
