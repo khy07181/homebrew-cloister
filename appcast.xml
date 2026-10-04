@@ -3,6 +3,35 @@
     <channel>
         <title>Cloister</title>
         <item>
+            <title>1.1.3</title>
+            <pubDate>Sun, 04 Oct 2026 10:07:56 +0900</pubDate>
+            <sparkle:version>202610041005</sparkle:version>
+            <sparkle:shortVersionString>1.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>Added</h3>
+<ul>
+<li>Opt-in crash reports. If Cloister quits unexpectedly, the next launch asks whether to send the report to support@dochigarden.com, with an optional comment and reply email. Reports never include your sessions, presets, or settings, and nothing is sent unless you click Send Report or turn on "Send crash reports automatically" in About ▸ Diagnostics</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Updates moved out of the menu bar popover. "Check for Updates…" now lives in the dashboard's About tab, next to the version, with a "Check for updates automatically" switch and the time of the last check (the App menu item stays). A scheduled check that finds a new version no longer opens the update window behind your other windows: the popover and About show a quiet "Update to X…" row instead, and the usual update window opens when you click it. Right after launch, while no session is running, it still opens directly. The row stays — through "Remind Me Later" and relaunches — until you install or skip that version</li>
+<li>The popover footer is now a small menu: Dashboard, Settings (⌘,), and Quit (⌘Q) as full-width rows with hover highlight and shortcut hints</li>
+</ul>
+<h3>Fixed</h3>
+<ul>
+<li>A session where you finished the focus but skipped the break no longer reads as "Cancelled" — History and Today show "Break skipped". It still earns no stack; only the wording and colour change</li>
+<li>Deleting a preset now asks first, and the last preset can no longer be deleted. Deleting the selected preset hands the selection to another one: before, the app kept starting sessions from a preset that was already gone</li>
+<li>Default presets could appear twice. A Mac that joins an iCloud library now gives up the "50/10" and "25/5" it created for itself on first launch and keeps what the library has — including a default you edited, renamed or deleted on your other Mac. Presets you created or edited are never removed. This stops new duplicates appearing; if you already have two copies of a preset, delete the one you don't want in Settings ▸ Presets</li>
+<li>"Check for Updates…" in the menu bar popover did nothing since 1.1.0; it reached for the app delegate through a path SwiftUI does not expose, so the click was silently dropped. Automatic daily checks and the App menu item were unaffected</li>
+<li>Cloister no longer aborts at launch on macOS 15 (Sequoia). The menu bar item was created while SwiftUI was still initializing, before AppKit had finished launching; macOS 26 tolerated that, macOS 15 crashed before the icon appeared. It is now created in `applicationDidFinishLaunching`</li>
+<li>With iCloud sync on, Cloister recalculated every day's statistics about every two seconds for as long as it ran, even when nothing had changed: saving the results counted as a change and started the next round. On a long history each round also froze the app for a second or two, including whenever you opened the menu bar popover. Statistics are now recalculated in the background, only days that actually changed are saved, and the work stops once everything is up to date. Opening the menu bar popover no longer re-reads your whole history when nothing has changed since the last check</li>
+<li>The timer widget and the Live Activity could show "Unable to Load" after Cloister stopped updating them mid-session (a force quit, or iOS suspending the app) and the session's end time passed. They now count down to 0:00 until the app catches up</li>
+<li>Insights and the activity heatmap no longer recalculate everything every minute. They update when your data changes, turn over to the new day at midnight, and check at most every 15 minutes in between, so "today" still catches up after the Mac sleeps or you change time zones. On several years of history a refresh now takes tens of milliseconds instead of about a second</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.1.3/cloister-1.1.3.dmg" length="5397250" type="application/octet-stream" sparkle:edSignature="eZh4uzm6cxR+6EXTr5bzzipaHXWJvggfR8+cqtICCgVgAE352l5rYAEISbi+MBs9NIYI34EQY7KlaYE55/9ZBw=="/>
+        </item>
+        <item>
             <title>1.1.2</title>
             <pubDate>Thu, 10 Sep 2026 17:40:19 +0900</pubDate>
             <sparkle:version>202609101727</sparkle:version>
@@ -35,35 +64,6 @@
 </ul>
 ]]></description>
             <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.1.1/cloister-1.1.1.dmg" length="4799440" type="application/octet-stream" sparkle:edSignature="w04bzYmLJtOAJaqCan5T7kUMNWEGOzut3ooObMoKTpfga9vc9wQPgABbCEOfi6vFVRbq24C+MnAlczl3REsuAw=="/>
-        </item>
-        <item>
-            <title>1.1.0</title>
-            <pubDate>Mon, 03 Aug 2026 13:33:45 +0900</pubDate>
-            <sparkle:version>202608031238</sparkle:version>
-            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h3>Added</h3>
-<ul>
-<li>iCloud sync (Pro): completed cycle history and presets sync across Macs via the user's iCloud account. Off by default; toggle in the Pro tab (applies after restart). Running timers stay per-device.</li>
-<li>Cloister Pro lifetime license — activation, validation with a 14-day offline grace window, and deactivation via Lemon Squeezy (dedicated Pro tab)</li>
-<li>Menu bar progress ring (emerald focus / gold break) with a configurable display mode: ring, time, or both</li>
-<li>Explicit SwiftData schema versioning with an automatic pre-migration store backup (last 3 backups kept)</li>
-<li>Send Feedback — a Help-menu item and a Settings ▸ Support row that open a pre-filled email to support (including your app and macOS version)</li>
-</ul>
-<h3>Changed</h3>
-<ul>
-<li>Runs as a dynamic menu-bar agent; app bundle renamed to Cloister.app</li>
-<li>Default keyboard shortcuts moved to the conflict-safe ctrl+opt+cmd chord</li>
-<li>Minimum supported macOS lowered from 26.2 to 15 (Sequoia)</li>
-</ul>
-<h3>Fixed</h3>
-<ul>
-<li>Menu bar popover now dismisses on outside click</li>
-<li>Menu bar popover colors stay stable across app states</li>
-<li>Long break no longer arrives a session early when an earlier focus session was left paused for hours (for example, running overnight)</li>
-</ul>
-]]></description>
-            <enclosure url="https://github.com/khy07181/homebrew-cloister/releases/download/v1.1.0/cloister-1.1.0.dmg" length="4777971" type="application/octet-stream" sparkle:edSignature="C5Vt4oPPDSgoVQ8AvowpJVBVkuQm609PF1ct0QAzLTwGRs+P24tF6MQzch+wOe/Orv94TyQZZfRxSEdmjQrWBw=="/>
         </item>
         <item>
             <title>1.0.1</title>
